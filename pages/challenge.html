@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Challenge</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link rel="stylesheet" href="../theme/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../theme/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../theme/css/pygments/default.min.css">
+    <link rel="stylesheet" href="../theme/css/style.css">
+    <link rel="stylesheet" href="../theme/css/custom.css">
+    <link href="../theme/fonts/icomoon/style.css" rel="stylesheet">
+    <link href="../theme/css2/style.css" rel="stylesheet">
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-88572407-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+
+    <!--<body>-->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10">
+                    <h1 class="title" style="width:950px">
+                        <a href="../">
+                            ICLR 2021 Workshop: Machine Learning for Preventing and Combating Pandemics
+                        </a>
+
+                    </h1>
+                    <br />
+                    <ul class="list-inline" style="width:max-content">
+                        <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                        <li class="list-inline-item"><a href="../pages/call-for-participation.html">Call for
+                                Submissions</a></li>
+                        <li class="list-inline-item"><a href="../pages/schedule.html">Schedule</a></li>
+                        <li class="list-inline-item"><a href="../pages/speakers.html">Speakers</a></li>
+                        <li class="list-inline-item"><a href="../pages/organizers.html">Organizers</a></li>
+                        <li class="list-inline-item"><a href="../pages/Program Committee.html">Program Committee</a>
+                        </li>
+                        <li class="list-inline-item"><a href="../pages/Accepted Paper.html">Accepted Papers</a></li>
+                        <li class="list-inline-item"><a href="../pages/challenge.html">Challenge</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+<!--<p><p><p>-->
+    <br />
+    <br />
+    <div class="site-section">
+        <div class="container">
+            <div class="row middle">
+                <!-- Challenge 1-->
+                <div class="col-lg-12" id="challenge1">
+                    <div class="section-title">
+                        <h1>Track1</h1>
+                        <h4>MedDG: Entity-aware medical dialogue generation</h4>
+                    </div>
+                    <div class="trend-entry d-flex">
+                        <div class="trend-contents">
+                            <p>
+                                A medical dialogue system aims to generate context consistent and medically meaningful responses conditioned on the dialogue history.
+                                In this track, we focus on entity-aware medical dialogue generation [1, 2].  Formally, given the dialogue history X={X_1,X_2,...,X_K}
+                                between the doctor and the patient, where X_K is the patient's last utterance, the target of this task is to generate the next response
+                                of the doctor X_{K+1} with as many correct entities as possible.<br />
+                                MedDG is a large-scale entity-centric medical dialogue dataset related to 12 types of common gastrointestinal diseases, with more than
+                                17K conversations and 385K utterances collected from the online health consultation community. Each conversation is annotated with five
+                                different categories of entities, including diseases, symptoms, attributes, tests, and medicines. For more details about this dataset,
+                                please refer to <a href="https://arxiv.org/abs/2010.07497">this preprint</a>.<br />
+                                In addition, according to Gururangan, Suchin et al[3]. when tailoring
+                                a pretrained model to the domain of a target task, a second phase of pretraining in-domain leads to performance gains. MedDialog[4] provides
+                                3.4 million annotation-free conversations between patients and doctors, which could be used for domain-adaptive pretraining.
+                                please refer to <a href="https://www.aclweb.org/anthology/2020.emnlp-main.743.pdf">MedDialog</a>.
+                            </p>
+
+                            <ul>
+                                <li><strong>Evaluation:</strong> Average of 3 metrics: BLEU-1/4 and Entity-F1.</li>
+                                <li><strong>Download: </strong> The training dataset is available at <a
+                                        href="https://drive.google.com/file/d/1lQ53qEcg6ekaFGf-OFbhiYnd4S_Cgkvo/view?usp=sharing">
+                                    Google Drive</a> <br /></li>
+                                <li><strong>Submission: </strong> <a
+                                        href="https://competitions.codalab.org/competitions/29703">https://competitions.codalab.org/competitions/29703</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-12" id="challenge3">
+                    <div class="section-title">
+                        <br />
+                        <h1>Track2</h1>
+                        <h4>Dialogue system for medical diagnosis</h4>
+                    </div>
+                    <div class="trend-entry d-flex">
+                        <div class="trend-contents">
+                            <p>
+                                This track targets on building task-oriented dialogue system for automatic medical diagnosis [5, 6, 7],
+                                which converses with patients to collect additional symptoms beyond their self-reports and makes a disease
+                                diagnosis in the end.Concretly, the system can only access the explicit symptoms in the beginning. When it
+                                requests a symptom during the dialogue, the user simulator will take one of the three actions including True
+                                for the positive symptom, False for the negative symptom, and Not sure for the symptom that is not mentioned
+                                in the user goal. The maximum number of terms are 22. <br />
+                                Since the scales of the existing datasets are relatively small, we constructed a new Medical Diagnosis Dialogue dataset named <strong>MDD</strong>,
+                                including 12 diseases in the General domain. Following the Muzhi dataset [5], we converted source medical records into
+                                structured user goals including only disease tags, explicit symptoms, and implicit symptoms to protect privacy as much as possible.
+                                Compared with previous datasets, MDD is three times larger, including 2,374 dialogues, 12 disease types, and 118 symptom types.
+                                Besides, it is derived from real-world patients in offline (brick-and-mortar) hospitals, thus closer to the real clinical diagnosis scenario.
+                                The MDG-12 dataset was split to 8:1:1 for training, development and test, respectively.
+                            </p>
+
+                            <ul>
+                                <li><strong>Evaluation:</strong> Diagnosis Accuracy * 0.8 + Symptom F1 * 0.2.</li>
+                                <li><strong>Download: </strong> Please download the data from <a href="https://drive.google.com/file/d/1uSiHlscCDpq0UfQJz4M0cYdE3ZfIn_QO/view?usp=sharing">MDD Dataset</a>
+                                </li>
+                                <li><strong>Submission: </strong> <a href="https://competitions.codalab.org/competitions/29706">https://competitions.codalab.org/competitions/29706</a>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge 2-->
+
+<!--                <div class="col-lg-12" id="challenge2">-->
+<!--                    <div class="section-title">-->
+<!--                        <br />-->
+<!--                        <h1>Track2</h1>-->
+<!--                        <h4>Dialogue system for medical diagnosis</h4>-->
+<!--                    </div>-->
+<!--                    <div class="trend-entry d-flex">-->
+<!--                        <div class="trend-contents">-->
+<!--                            <p>-->
+<!--                                This track targets on building task-oriented dialogue system for automatic medical diagnosis [4, 5, 6],-->
+<!--                                which converses with patients to collect additional symptoms beyond their self-reports and makes a disease-->
+<!--                                diagnosis in the end.Concretly, the system can only access the explicit symptoms in the beginning. When it-->
+<!--                                requests a symptom during the dialogue, the user simulator will take one of the three actions including True-->
+<!--                                for the positive symptom, False for the negative symptom, and Not sure for the symptom that is not mentioned-->
+<!--                                in the user goal. The maximun number of terms are 22. <br />-->
+<!--                                Since the scales of the existing datasets are relatively small, we constructed a new Medical Dialogue dataset named <strong>GMD-12</strong>,-->
+<!--                                including 12 diseases in the General domain. Following the Muzhi dataset [4], we converted source medical records into-->
+<!--                                structured user goals including only disease tags, explicit symptoms, and implicit symptoms to protect privacy as much as possible.-->
+<!--                                Compared with previous datasets, MDD is three times larger, including 2,374 dialogues, 12 disease types, and 118 symptom types.-->
+<!--                                Besides, it is derived from real-world patients in offline (brick-and-mortar) hospitals, thus closer to the real clinical diagnosis scenario.-->
+<!--                                The MDG-12 dataset was split to 8:1:1 for training, development and test, respectively.-->
+<!--                            </p>-->
+<!--                            <ul>-->
+<!--                                <li><strong>Evalution:</strong> Diagnosis Accuracy * 0.8 + Symptom F1 * 0.2.</li>-->
+<!--                                <li><strong>Download: </strong> Please download the data from <a href="https://drive.google.com/file/d/1uSiHlscCDpq0UfQJz4M0cYdE3ZfIn_QO/view?usp=sharing">MDD Dataset</a>-->
+<!--                                </li>-->
+<!--                                <li><strong>Submission: </strong> <a href="https://competitions.codalab.org/competitions/29704">https://competitions.codalab.org/competitions/29704</a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+                <!-- Challenge 3-->
+                <!-- add content -->
+                <div class="col-lg-12" id="awards">
+                    <br />
+                    <div class="section-title">
+                        <h2>Awards</h2>
+                    </div>
+                    <div class="trend-entry d-flex">
+                        <div class="trend-contents">
+                            <p>
+                                This year, <a href="https://jarvislab.tencent.com/">Tencent Javis Lab</a> will provide cash awards to the winners of each track. In each track, the 1st, 2nd, and 3rd places will receive $1000, $500, and $300, respectively.<br />
+                                Founded in September 2018, Tencent Javis Lab is a group focusing on medical artificial intelligence. They are committed to building a real-time evolving knowledge and 
+                                decision-making platform in healthcare through machine learning and big data analytics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- References -->
+                <div class="col-lg-12" id="reference">
+                <br />
+                    <div class="section-title">
+                        <h2>References</h2>
+                    </div>
+                    <div class="trend-entry d-flex">
+                        <div class="trend-contents">
+                            <p>[1] Wenge Liu, Jianheng Tang, Jinghui Qin, Lin Xu, Zhen Li, Xiaodan Liang. MedDG: A
+                                Large-scale Medical Consultation Dataset for Building Medical Dialogue System. Arxiv,
+                                2020.</p>
+                            <p>[2] Shuai Lin, Pan Zhou, Xiaodan Liang, Jianheng Tang, Ruihui Zhao, Ziliang Chen, Liang
+                                Lin. Graph-Evolving Meta-Learning for Low-Resource Medical Dialogue Generation. In AAAI,
+                                2021.</p>
+                            <p>[3] Suchin Gururangan, Ana Marasović, Swabha Swayamdipta, Kyle Lo, Iz Beltagy, Doug Downey,
+                                Noah A. Smith. Don't Stop Pretraining: Adapt Language Models to Domains and Tasks. In ACL, 2020.
+                            <p>[4] Guangtao Zeng, Wenmian Yang, Zeqian Ju, Yue Yang, Sicheng Wang, Ruisi Zhang, Meng Zhou,
+                                Jiaqi Zeng, Xiangyu Dong, Ruoyu Zhang, Hongchao Fang, Penghui Zhu, Shu Chen, Pengtao Xie.
+                                MedDialog: Large-scale Medical Dialogue Datasets. In EMNLP, 2020.</p>
+                            <p>[5] Zhongyu Wei, Qianlong Liu, Baolin Peng, Huaixiao Tou, Ting Chen, Xuanjing Huang,
+                                Kam-fai Wong, Xiangying Dai. Task-oriented Dialogue System for Automatic Diagnosis. In
+                                ACL, 2018.</p>
+                            <p>[6] Lin Xu, Qixian Zhou, Ke Gong, Xiaodan Liang, Jianheng Tang, Liang Lin. End-to-End
+                                Knowledge-Routed Relational Dialogue System for Automatic Diagnosis. In AAAI, 2019.</p>
+                            <p>[7] Yuan Xia, Jingbo Zhou, Zhenhui Shi, Chao Lu, Haifeng Huang. Generative Adversarial
+                                Regularized Mutual Information Policy Gradient Framework for Automatic Diagnosis. In AAAI 2020.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spanner Area Start-->
+                <div class="col-lg-12 with-img" id="spanner">
+                    <br />
+                    <div class="section-title">
+                        <h2>Sponsor</h2>
+                    </div>
+                    <div class="trend-entry d-flex" style="background-color: green;">
+                        <!-- pic No.2 -->
+                        <div class="col-xs-6 col-md-4 spanner-pic-box">
+                            <div class="thumbnail">
+                                <a href="http://www.sysu.edu.cn/cn/index.htm">
+                                    <img src="../images/sponsor/sysu.jpeg" alt="Sun Yat-sen University"
+                                        class="spanner-img" align="center">
+                                    <div>
+                                        <h5>Sun Yat-sen University</h5>
+                                    </div>
+                                </a>
+<!--                                <p class="spanner-pic-description">Professor at University of Cambridge-->
+<!--                                    <br />-->
+<!--                                </p>-->
+                            </div>
+                        </div>
+
+
+                        <!-- pic No.1 -->
+                        <div class="col-xs-6 col-md-4 spanner-pic-box">
+                            <div class="thumbnail">
+                                <a href="https://jarvislab.tencent.com/">
+                                    <img src="../images/sponsor/tencent.png" alt="Tencent Jarvis" align="center"
+                                        class="spanner-img">
+                                    <div>
+                                        <h5>Tencent Jarvis</h5>
+                                    </div>
+                                </a>
+<!--                                <p class="spanner-pic-description">Associate Professor at University of Washington-->
+<!--                                    <br />-->
+
+<!--                                </p>-->
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-md-4 spanner-pic-box">
+                            <div class="thumbnail">
+                                <a href="https://www.ucsd.edu/">
+                                    <img src="../images/sponsor/ucsd.jpeg" alt="University of California,San Diego"
+                                        class="spanner-img" align="center">
+                                    <div>
+                                        <h5>University of California,San Diego </h5>
+                                    </div>
+                                </a>
+<!--                                <p class="spanner-pic-description">Professor at The Swiss AI Lab IDSIA-->
+<!--                                    <br />-->
+<!--                                </p>-->
+                            </div>
+                        </div>
+
+
+                        <!-- pic No.3 -->
+<!--                        <div class="col-xs-6 col-md-3 spanner-pic-box">-->
+<!--                            <div class="thumbnail">-->
+<!--                                <a href="https://www.cmu.edu/">-->
+<!--                                    <img src="../images/sponsor/cmu.jpg" alt="Carnegie Mellon University"-->
+<!--                                        class="spanner-img" align="center">-->
+<!--                                    <div>-->
+<!--                                        <h5>Carnegie Mellon University</h5>-->
+<!--                                    </div>-->
+<!--                                </a>-->
+<!--&lt;!&ndash;                                <p class="spanner-pic-description">Professor at The Swiss AI Lab IDSIA&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <br />&ndash;&gt;-->
+<!--&lt;!&ndash;                                </p>&ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+                        <!-- pic No.4 -->
+                        <!-- add content -->
+<!--                                        <br /><br />-->
+                    </div>
+                </div>
+                <!-- Spanner Area End-->
+                <!-- Organization Team Start-->
+                <div class="col-lg-12 with-img" id="organization">
+                    <br /><br />
+                    <div class="section-title">
+                        <h2>Organization Team</h2>
+                    </div>
+                    <div class="trend-entry d-flex" style="background-color: green;">
+                        <!-- pic No.1 -->
+                        <div class="col-xs-6 col-md-3 org-pic-box">
+                            <div class="thumbnail">
+                                <a href="https://lemondan.github.io/">
+                                    <img src="../images/challengeteam/xiaodanLiang.png" alt="XiaodanLiang" align="center"
+                                        class="org-img">
+                                    <div>
+                                        <h6>Xiaodan Liang</h6>
+                                    </div>
+                                </a>
+                                <p class="org-pic-description">xdliang328@gmail.com
+                                    <br />
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-md-2 org-pic-box">
+                            <div class="thumbnail">
+                                <a href="https://scholar.google.com/citations?user=5W46DvcAAAAJ">
+                                    <img src="../images/challengeteam/WengeLiu.png" alt="wenge liu"
+                                        class="org-img" align="center">
+                                    <div>
+                                        <h6>Wenge Liu</h6>
+                                    </div>
+                                </a>
+                                <p class="org-pic-description">kzllwg@gmail.com
+                                    <br />
+                                </p>
+                            </div>
+                        </div>
+                        <!-- pic No.3 -->
+                        <div class="col-xs-6 col-md-2 org-pic-box">
+                            <div class="thumbnail">
+                                <a href="https://scholar.google.com/citations?user=w4kWvXEAAAAJ">
+                                    <img src="../images/challengeteam/jianhengTang.png" alt="jianheng tang"
+                                        class="org-img" align="center">
+                                    <div>
+                                        <h6>Jianheng Tang</h6>
+                                    </div>
+                                </a>
+                                <p class="org-pic-description">sqrt3tjh@gmail.com
+                                    <br />
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- pic No.4 -->
+                        <div class="col-xs-6 col-md-2 org-pic-box">
+                            <div class="thumbnail">
+                                <a href="https://github.com/ha-lins">
+                                    <img src="../images/challengeteam/shuailin.png" alt="Shuai Lin"
+                                        class="org-img" align="center">
+                                    <div>
+                                        <h6>Shuai Lin</h6>
+                                    </div>
+                                </a>
+                                <p class="org-pic-description">shuailin97@gmail.com
+                                    <br />
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-md-2 org-pic-box">
+                            <div class="thumbnail">
+                                <a href="https://scholar.google.com/citations?user=3xNwmUsAAAAJ&hl=zh-CN">
+                                    <img src="../images/challengeteam/zhengye.jpg" alt="Zheng Ye"
+                                        class="org-img" align="center">
+                                    <div>
+                                        <h6>Zheng Ye</h6>
+                                    </div>
+                                </a>
+                                <p class="org-pic-description">jamesyip1997@gmail.com
+                                    <br />
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-md-3 org-pic-box">
+                            <div class="thumbnail">
+                                <a href="https://sites.google.com/site/yefengzheng/">
+                                    <img src="../images/challengeteam/yefengzheng.jpg" alt="Yefeng Zheng"
+                                        class="org-img" align="center">
+                                    <div>
+                                        <h6>Yefeng Zheng</h6>
+                                    </div>
+                                </a>
+                                <p class="org-pic-description">yefengzheng@tencent.com
+                                    <br />
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-md-2 org-pic-box">
+                            <div class="thumbnail">
+                                <a href="http://people.idsia.ch/~juergen/">
+                                    <img src="../images/challengeteam/xichen.jpg" alt="Xi Chen"
+                                        class="org-img" align="center">
+                                    <div>
+                                        <h6>Xi Chen</h6>
+                                    </div>
+                                </a>
+                                <p class="org-pic-description">jasonxchen@tencent.com
+                                    <br />
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-md-2 org-pic-box">
+                            <div class="thumbnail">
+                                <a href="https://scholar.google.com/citations?user=0okAFQMAAAAJ">
+                                    <img src="../images/challengeteam/ruihuizhao.png" alt="Ruihui Zhao"
+                                        class="org-img" align="center">
+                                    <div>
+                                        <h6>Ruihui Zhao</h6>
+                                    </div>
+                                </a>
+                                <p class="org-pic-description">zacharyzhao@tencent.com
+                                    <br />
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- pic No.5 -->
+                        <div class="col-xs-6 col-md-2 org-pic-box">
+                            <div class="thumbnail">
+                                <a href="https://dblp.org/pid/239/4466.html">
+                                    <img src="../images/challengeteam/yafeiliu.jpg" alt="Yafei Liu"
+                                        class="org-img" align="center">
+                                    <div>
+                                        <h6>Yafei Liu</h6>
+                                    </div>
+                                </a>
+                                <p class="org-pic-description">davenliu@tencent.com
+                                    <br />
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-md-2 org-pic-box">
+                            <div class="thumbnail">
+                                <a href="https://scholar.google.com/citations?user=4FWRdrAAAAAJ">
+                                    <img src="../images/challengeteam/yichen.jpg" alt="Yi cheng"
+                                        class="org-img" align="center">
+                                    <div>
+                                        <h6>Yi Cheng</h6>
+                                    </div>
+                                </a>
+                                <p class="org-pic-description">alyssacheng@tencent.com
+                                    <br />
+                                </p>
+                            </div>
+                        </div>
+                        <!-- pic No.6 -->
+                        <!-- add content -->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- END section -->
+                    <br /><br />
+
+    </div>
+    <!-- .site-wrap -->
+    <!-- loader -->
+    <div class="show fullscreen" id="loader">
+        <svg class="circular" height="48px" width="48px">
+            <circle class="path-bg" cx="24" cy="24" fill="none" r="22" stroke="#eeeeee" stroke-width="4" />
+            <circle class="path" cx="24" cy="24" fill="none" r="22" stroke="#ff5e15" stroke-miterlimit="10"
+                stroke-width="4" />
+        </svg>
+    </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script>
+                                All rights reserved | This template is made with <i aria-hidden="true"
+                                    class="icon-heart text-danger"></i> by
+                                <a href="https://colorlib.com" target="_blank" style="text-decoration: none;">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <script src="../theme/js/jquery-3.3.1.min.js"></script>
+    <script src="../theme/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../theme/js/jquery-ui.js"></script>
+    <script src="../theme/js/popper.min.js"></script>
+    <script src="../theme/js/bootstrap.min.js"></script>
+    <script src="../theme/js/owl.carousel.min.js"></script>
+    <script src="../theme/js/jquery.stellar.min.js"></script>
+    <script src="../theme/js/jquery.countdown.min.js"></script>
+    <script src="../theme/js/bootstrap-datepicker.min.js"></script>
+    <script src="../theme/js/jquery.easing.1.3.js"></script>
+    <script src="../theme/js/aos.js"></script>
+    <script src="../theme/js/jquery.fancybox.min.js"></script>
+    <script src="../theme/js/jquery.sticky.js"></script>
+    <script src="../theme/js/jquery.mb.YTPlayer.min.js"></script>
+
+
+    <script src="../theme/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Challenge</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+
+    <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+
+    <link href="../theme/fonts/icomoon/style.css" rel="stylesheet">
+
+    <!--bootstrap pass -->
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+
+    <link href="../theme/css2/jquery-ui.css" rel="stylesheet">
+    <link href="../theme/css2/owl.carousel.min.css" rel="stylesheet">
+    <link href="../theme/css2/owl.theme.default.min.css" rel="stylesheet">
+    <!-- <link href="../theme/css2/owl.theme.default.min.css" rel="stylesheet"> -->
+
+    <link href="../theme/css2/jquery.fancybox.min.css" rel="stylesheet">
+
+    <link href="../theme/fonts/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <link href="../theme/css2/aos.css" rel="stylesheet">
+    <link href="../theme/css2/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="../theme/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../theme/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../theme/css/pygments/default.min.css">
+    <link rel="stylesheet" href="../theme/css/style.css">
+    <link rel="stylesheet" href="../theme/css/custom.css">
+    
+    <!-- 1 -->
+    <link href="../theme/css2/style.css" rel="stylesheet">
+
+
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-88572407-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+
+<!--<head>-->
+<!--  &lt;!&ndash; Required meta tags always come first &ndash;&gt;-->
+<!--  <meta charset="utf-8">-->
+<!--  <meta http-equiv="x-ua-compatible" content="ie=edge">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+<!--  <title> ICLR 2021 Workshop: Machine Learning for Preventing and Combating Pandemics-->
+<!--</title>-->
+<!--  <link rel="canonical" href="./index.html">-->
+
+
+
+<!--  <link rel="stylesheet" href="../theme/css/bootstrap.min.css">-->
+<!--  <link rel="stylesheet" href="../theme/css/font-awesome.min.css">-->
+<!--  <link rel="stylesheet" href="../theme/css/pygments/default.min.css">-->
+<!--  <link rel="stylesheet" href="../theme/css/style.css">-->
+<!--  <link rel="stylesheet" href="../theme/css/custom.css">-->
+
+
+<!--<meta name="description" content="ICLR 2021 Workshop: Machine Learning for Preventing and Combating Pandemics">-->
+<!--</head>-->
+
+<!-- <body data-offset="300" data-spy="scroll" data-target=".site-navbar-target"> -->
+<body>
+
+    <!--<body>-->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10">
+                    <!-- <h1 class="title" style="width:950px"><a href="../">ICLR 2021 Workshop: Machine Learning for Preventing and Combating Pandemics</a></h1> -->
+                    <h1 class="title" style="width:950px">
+                        <a href="../">
+                            ICLR 2021 Workshop: Machine Learning for Preventing and Combating Pandemics
+                        </a>
+                        
+                    </h1>
+                    <br />
+                    <ul class="list-inline" style="width:max-content">
+                        <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                        <li class="list-inline-item"><a href="../pages/call-for-participation.html">Call for
+                                Submissions</a></li>
+                        <li class="list-inline-item"><a href="../pages/schedule.html">Schedule</a></li>
+                        <li class="list-inline-item"><a href="../pages/speakers.html">Speakers</a></li>
+                        <li class="list-inline-item"><a href="../pages/organizers.html">Organizers</a></li>
+                        <li class="list-inline-item"><a href="../pages/Program Committee.html">Program Committee</a>
+                        </li>
+                        <li class="list-inline-item"><a href="../pages/Accepted Paper.html">Accepted Papers</a></li>
+                        <li class="list-inline-item"><a href="../pages/challenge.html">Challenge</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+                <!-- Challenge 1-->
+                <div class="col-lg-12" id="challenge1">
+
+                    <!-- <p style="text-align: justify">We will organize the second Learning from Imperfect Data (LID) challenge on object semantic segmentation and scene parsing, which includes two competition tracks.  </p>  （<strong>challenge deadline: June 8, 2019</strong>） -->
+                    <!--                <p>In conjunction with this workshop, we will hold three challenges this-->
+                    <!--                    year.</p>  &lt;!&ndash;（<strong>challenge deadline: June 8, 2019</strong>）&ndash;&gt;-->
+
+                    <div class="section-title">
+                        <h1>Track1</h1>
+                        <h4>MedCon: Medical Dialogue Generation</h4>
+                    </div>
+                    <div class="trend-entry d-flex">
+                        <div class="trend-contents">
+                            <p>
+                                A medical dialogue system aims to generate context-consistent and medically meaningful
+                                responses conditioned on the dialogue history.
+                                This track targets on two tasks: response generation and entity prediction [1, 2]. Given
+                                the dialogue history, the response generation task is to
+                                generate the next response to the patient and the entity prediction task aims to infer
+                                all entities appearing in the next response.
+                                The dataset, namely MedCon, is a large-scale entity-centric medical dialogue dataset
+                                related to 12 types of common gastrointestinal diseases.
+                                MedCon is collected from a Chinese online health community, Chunyu-Doctor, and contains
+                                more than 17K conversations and 385K utterances with
+                                the annotation of diverse medical entities.
+                                We provide entity-level annotations of 3K dialogues (validation/testing: 2, 000/1, 000)
+                                for evaluation.
+                            </p>
+                            <!-- </br> -->
+
+                            <ul>
+                                <!-- <li> For training, all the images in the training set of ILSVRC DET are permitted. </li> -->
+                                <!-- <li> If supervised saliency detection is applied, only MSRA-B dataset is permitted.  </li> -->
+                                <li><strong>Evalution:</strong> Average of 5 metrics: BLEU-1/4, Distinct-1/2 and
+                                    Entity-F1.</li>
+                                <li><strong>Download: </strong> The training dataset is available at <a
+                                        href="https://drive.google.com/file/d/1lt529-P0TcD9Tb7EsK-4VAxtLqje25-B/view?usp=sharing">
+                                        Google Drive</a> <br />
+                                    <!--                                <strong class="text-danger">Note: </strong> The image label information can be extracted using the <a href="https://drive.google.com/open?id=1ajioybXZYPIXUyQl7G4MRykr7AvelAL6">scripts</a> </li>-->
+                                <li><strong>Submission: </strong> <a
+                                        href="https://competitions.codalab.org/competitions/29288">https://competitions.codalab.org/competitions/29288</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge 2-->
+
+                <div class="col-lg-12" id="challenge2">
+                    <div class="section-title">
+                        <h1>Track2</h1>
+                        <h4> Medical Dialogue System for Automatic Diagnosis</h4>
+                    </div>
+                    <div class="trend-entry d-flex">
+                        <div class="trend-contents">
+                            <!-- <p> Beyond object segmentation, background categories such as wall, road, sky need to be further specified for the scene parsing, which is a challenging task compared with object semantic segmentation. Thus, it will be more difficult and expensive to manually annotate pixel-level mask for this task. In this track, we propose to leverage several labeled points that are much easier to obtain to guide the training process.
+      The dataset is built upon the well-known ADE20K, which includes 20,210 training images from 150 categories. We provide the point-based annotations on the training set. Please download the data from <a href="http://sceneparsing.csail.mit.edu/data/LID2019"> LID Challenge Track2 data </a>. <br/> -->
+                            <p> This track targets on building dialogue system for automatic medical diagnosis that
+                                converses with patients to collect
+                                additional symptoms beyond their self-reports and automatically makes a diagnosis [3,
+                                4]. The dataset is collected from
+                                a Chinese online health-care community (dxy.com) with annotations of 5 types of diseases
+                                and 41 symptoms.
+                                There are 527 dialogue instances in total, where 423/104 instances for training/testing
+                                set.
+                            </p>
+                            <!-- </br> -->
+                            <!-- <strong> <span class="text-danger">*Note:</span> </strong> -->
+                            <!-- </p> -->
+                            <ul>
+                                <li><strong>Evalution:</strong> Diagnosis Accuracy.</li>
+                                <li><strong>Download: </strong> Please download the data from <a
+                                        href="https://drive.google.com/file/d/1l-lNDeHWmgC3uOEpJthe4A8-8J1YjI0n/view?usp=sharing">
+                                        Dxy Dataset</a>
+                                </li>
+                                <li><strong>Submission: </strong> <a
+                                        href="https://competitions.codalab.org/competitions/29289">https://competitions.codalab.org/competitions/29289</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge 3-->
+                <!--            <div class="col-lg-12" id="challenge3">-->
+                <!--                <div class="section-title">-->
+                <!--                    <h1>Track3</h1>-->
+                <!--                    <h4> Weakly-supervised Object Localization</h4>-->
+                <!--                </div>-->
+                <!--                <div class="trend-entry d-flex">-->
+                <!--                    <div class="trend-contents">-->
+                <!--                        <p> This track targets on making the classification networks be equipped with the ability of-->
+                <!--                            object localization [7, 8, 9]. The dataset is built upon the image-->
+                <!--                            classification/localization track of ImageNet Large Scale Visual Recognition Competition-->
+                <!--                            (ILSVRC), which totally includes 1.2 million training images from 1000 categories. We-->
+                <!--                            provide pixel-level annotations of 44, 271 images (validation/testing: 23, 151/21, 120) for-->
+                <!--                            evaluation.-->
+                <!--                        </p>-->
+                <!--                        <ul>-->
+                <!--                            <li><Strong>Evalution:</Strong> IoU curve. With the predicted object localization map, we calculate-->
+                <!--                                the IoU scores between the foreground pixels and the ground-truth masks under different-->
+                <!--                                thresholds. In the ideal curve, the highest IoU score is expected to close to 1.0. The-->
+                <!--                                threshold value corresponding to the highest IoU score is expected to be 255 since the-->
+                <!--                                higher threshold values can reflect a higher contrast between the target object and the-->
+                <!--                                background.-->
+                <!--                            </li>-->
+                <!--                            <li> <Strong>Download: </Strong> validation dataset, test list and evaluation scripts are available at <a-->
+                <!--                                        href="https://pan.baidu.com/s/1Ob7bzJcvirpkqZ-gQL-MjA">Baidu Drive (pwd: z5yp) </a> and <a-->
+                <!--                                        href="https://drive.google.com/drive/folders/1rd3iV9Xif2tRgofQWrL3qH1_lIFkicdI?usp=sharing">-->
+                <!--                                    Google Drive</a></li> </li>-->
+                <!--                            <li> <Strong>Submission: </Strong> <a href="https://evalai.cloudcv.org/web/challenges/challenge-page/557/overview">https://evalai.cloudcv.org/web/challenges/challenge-page/557/overview</a> </li>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--            </div>-->
+
+                <!--            &lt;!&ndash; Rules &ndash;&gt;-->
+                <!--            <div class="col-lg-12" id="rules">-->
+
+                <!--                <div class="section-title">-->
+                <!--                    <h1>RULES</h1>-->
+                <!--                </div>-->
+                <!--                <div class="trend-entry d-flex">-->
+                <!--                    <div class="trend-contents">-->
+                <!--                        <p> This year, we have two strict rules for all competitors.-->
+                <!--                        </p>-->
+                <!--                        <ol>-->
+                <!--                            <li> For training, only the images provided in the training set are permitted.-->
+                <!--                                Competitors can use the classification models pre-trained on the training set of-->
+                <!--                                ILSVRC CLS-LOC to initialize the parameters but <strong-->
+                <!--                                        class="text-danger">CANNOT</strong> leverage any datasets with-->
+                <!--                                pixel-level annotations.-->
+                <!--                                In particular, for Track 1 and Track 3, only the image-level annotations of-->
+                <!--                                training images can be leveraged for supervision and the bounding-box annotations-->
+                <!--                                are <strong class="text-danger">NOT</strong> permitted.-->
+                <!--                            </li>-->
+                <!--                            <li>We encourage competitors to design elegant and effective models competing for all-->
+                <!--                                the tracks rather than ensembling multiple models.-->
+                <!--                                Therefore, we restrict the parameter size of the inference model(s) should be <strong-->
+                <!--                                        class="text-danger">LESS-->
+                <!--                                    than 150M</strong> (slightly more than two DeepLab V3+ [10] models using Resnet 101 as the-->
+                <!--                                backbone). The-->
+                <!--                                competitors ranked at Top-3 are required to submit the inference code for-->
+                <!--                                verification.-->
+                <!--                            </li>-->
+                <!--                        </ol>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--        </div>-->
+
+                <!-- Awards -->
+                <!--        <div class="col-lg-12" id="awards" style="padding-top:80px;margin-top:-80px;">-->
+                <!--            <div class="section-title">-->
+                <!--                <h1>Awards</h1>-->
+                <!--            </div>-->
+                <!--            <div class="trend-entry d-flex">-->
+                <!--                <div class="trend-contents">-->
+                <!--                    <p>-->
+                <!--                        This year, Baidu Inc will provide cash awards to the winners of each track.-->
+                <!--                        Participants are encouraged to submit the inference code based on the deep learning platform-->
+                <!--                         <a href="https://github.com/PaddlePaddle/Paddle">PaddlePaddle</a>-->
+                <!--                         , especially on the semantic segmentation toolkit <a href="https://github.com/PaddlePaddle/PaddleSeg">PaddleSeg</a>.-->
+                <!--                        <strong class="text-danger">Winners will receive a cash award of USD 2000 if they use the-->
+                <!--                            PaddlePaddle platform or a-->
+                <!--                            USD 500 cash award if other deep learning platforms are used.</strong>-->
+                <!--                    </p>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <!--        </div>-->
+
+                <!-- References -->
+                <div class="col-lg-12" id="reference">
+
+                    <div class="section-title">
+                        <h2>References</h2>
+                    </div>
+                    <div class="trend-entry d-flex">
+                        <div class="trend-contents">
+                            <p>[1] Wenge Liu, Jianheng Tang, Jinghui Qin, Lin Xu, Zhen Li, Xiaodan Liang. MedDG: A
+                                Large-scale Medical Consultation Dataset for Building Medical Dialogue System. Arxiv,
+                                2020.</p>
+                            <p>[2] Shuai Lin, Pan Zhou, Xiaodan Liang, Jianheng Tang, Ruihui Zhao, Ziliang Chen, Liang
+                                Lin. Graph-Evolving Meta-Learning for Low-Resource Medical Dialogue Generation. In AAAI,
+                                2021.</p>
+                            <p>[3] Zhongyu Wei, Qianlong Liu, Baolin Peng, Huaixiao Tou, Ting Chen, Xuanjing Huang,
+                                Kam-fai Wong, Xiangying Dai. Task-oriented Dialogue System for Automatic Diagnosis. In
+                                ACL, 2018.</p>
+                            <p>[4] Lin Xu, Qixian Zhou, Ke Gong, Xiaodan Liang, Jianheng Tang, Liang Lin. End-to-End
+                                Knowledge-Routed Relational Dialogue System for Automatic Diagnosis. In AAAI, 2019.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organization Team -->
+                <div class="col-lg-12" id="team" style="padding-top:80px;margin-top:-80px;">
+                    <div class="section-title">
+                        <h2>Organization Team</h2>
+                    </div>
+                    <div class="trend-entry d-flex">
+                        <div class="trend-contents" style="">
+
+                            <p> <u>Wenge Liu </u>(kzllwg@gmail.com) &nbsp;&nbsp; <u>Shuai Lin </u>(shuailin97@gmail.com)
+                                &nbsp;&nbsp; <u>Jianhen Tang </u>(sqrt3tjh@gmail.com)
+                            <p><u>Yafei Liu </u>(davenliu@tencent.com) &nbsp;&nbsp; <u>Ruihui Zhao
+                                </u>(zacharyzhao@tencent.com)
+                        </div>
+                    </div>
+                </div>
+                <!--        <div class="col-lg-12" id="awards" style="padding-top:80px;margin-top:-80px;">-->
+                <!--            <div class="section-title">-->
+                <!--                <h2>SPONSOR</h2>-->
+                <!--            </div>-->
+                <!--            <div class="row display-flex">-->
+                <!--                <div class="col-xs-6 col-md-4">-->
+                <!--                <div class="thumbnail">-->
+                <!--            <img-->
+                <!--                src="../images/speakers_200x200/Engelhardt.jpeg"-->
+                <!--                alt="Barbara Engelhardt"-->
+                <!--                style="width:70px;height:70px"-->
+                <!--                align="center">-->
+                <!--    </div>-->
+                <!--                                </div>-->
+
+                <!--                                <div class="col-xs-6 col-md-4">-->
+                <!--                <div class="thumbnail">-->
+                <!--            <img-->
+                <!--                src="../images/speakers_200x200/Engelhardt.jpeg"-->
+                <!--                alt="Barbara Engelhardt"-->
+                <!--                style="width:70px;height:70px"-->
+                <!--                align="center">-->
+                <!--    </div>-->
+                <!--                                </div>-->
+
+                <!--                                                <div class="col-xs-6 col-md-4">-->
+                <!--                <div class="thumbnail">-->
+                <!--            <img-->
+                <!--                src="../images/speakers_200x200/Engelhardt.jpeg"-->
+                <!--                alt="Barbara Engelhardt"-->
+                <!--                style="width:70px;height:70px"-->
+                <!--                align="center">-->
+                <!--    </div>-->
+                <!--                                </div>-->
+
+                <!--            </div>-->
+                <!--        </div>-->
+            </div>
+
+
+
+        </div>
+
+        <div class="col-lg-12" id="challenge2">
+            <div style="display:inline-block;width:500px;">
+                <script async="async" src="//rc.rev
+            olvermaps.com/0/0/7.js?i=2hlmeh3dic1&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;br=19&amp;sx=0"
+                    type="text/javascript"></script>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- END section -->
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="copyright">
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script>
+                            All rights reserved | This template is made with <i aria-hidden="true"
+                                class="icon-heart text-danger"></i> by
+                            <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    <!-- .site-wrap -->
+
+
+    <!-- loader -->
+    <div class="show fullscreen" id="loader">
+        <svg class="circular" height="48px" width="48px">
+            <circle class="path-bg" cx="24" cy="24" fill="none" r="22" stroke="#eeeeee" stroke-width="4" />
+            <circle class="path" cx="24" cy="24" fill="none" r="22" stroke="#ff5e15" stroke-miterlimit="10"
+                stroke-width="4" />
+        </svg>
+    </div>
+
+    <script src="../theme/js/jquery-3.3.1.min.js"></script>
+    <script src="../theme/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../theme/js/jquery-ui.js"></script>
+    <script src="../theme/js/popper.min.js"></script>
+    <script src="../theme/js/bootstrap.min.js"></script>
+    <script src="../theme/js/owl.carousel.min.js"></script>
+    <script src="../theme/js/jquery.stellar.min.js"></script>
+    <script src="../theme/js/jquery.countdown.min.js"></script>
+    <script src="../theme/js/bootstrap-datepicker.min.js"></script>
+    <script src="../theme/js/jquery.easing.1.3.js"></script>
+    <script src="../theme/js/aos.js"></script>
+    <script src="../theme/js/jquery.fancybox.min.js"></script>
+    <script src="../theme/js/jquery.sticky.js"></script>
+    <script src="../theme/js/jquery.mb.YTPlayer.min.js"></script>
+
+
+    <script src="../theme/js/main.js"></script>
+
+</body>
+
+</html>
