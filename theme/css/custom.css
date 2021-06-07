@@ -38,3 +38,7 @@ body {
    p.text-muted {
    /*color:#CCC !important*/
    }
+
+   .thumbnail p{
+    margin-bottom: 0;
+   }
